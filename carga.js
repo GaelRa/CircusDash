@@ -34,16 +34,16 @@ class Carga extends Phaser.Scene {
         this.load.image("fondo", "./Fondo1.png");
         this.load.image("cubo", "./Bubble2.png");
         this.load.image("spike", "./obstaculos.png");
-        this.load.image("spike2", "./obstaculos2.png");
+        this.load.image("spike2", "./obstaculo2.png");
         this.load.image("suelo", "./Piso.png");
         this.load.image("play", "./botonplay.png");
 
         this.load.image("fondo_inicio", "./fondete.jpg");
-        this.load.audio("musica", "./juego.mp3");
+        this.load.audio("musica", "./Juego.mp3");
         this.load.audio("salto_fx", "./salto.mp3");
         this.load.audio("sonido_muerte", "./explosion.mp3");
 
-        this.load.image("plataforma", "./plataforma.png");
+        this.load.image("plataforma", "./Plataforma.png");
 
         // Simular carga
         for(let i = 0; i < 30; i++){
