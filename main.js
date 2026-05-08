@@ -1,15 +1,21 @@
 const config = {
     type: Phaser.AUTO,
-    width: 1280,
+    width: 1280, // Resolución base (puedes dejar esta)
     height: 720,
-    scale: {
-        mode: Phaser.Scale.RESIZE,
-        autoCenter: Phaser.Scale.CENTER_BOTH
+   scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        forceOrientation: true, // Fuerza una orientación
+        orientation: Phaser.Scale.Orientation.LANDSCAPE // Pide modo horizontal
+    },
+    // IMPORTANTE: Para móviles, añade esto para que el audio funcione tras el primer toque
+    input: {
+        activePointers: 3 
     },
     physics: {
         default: 'arcade',
         arcade: {
-            debug: true
+            debug: false // Cámbialo a false para la versión final
         }
     },
     scene: [Boot, Carga, Inicio, Juego]

@@ -20,16 +20,20 @@
   </script>
 
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: black;
-      overflow: hidden;
-    }
-    canvas {
-      display: block;
-    }
-  </style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    overflow: hidden;
+    /* Evita que el usuario pueda mover la pantalla con el dedo */
+    touch-action: none; 
+    width: 100vw;
+    height: 100vh;
+  }
+  canvas {
+    display: block;
+  }
+</style>
 </head>
 <body>
     <!-- Scripts de lógica del juego -->
