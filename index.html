@@ -1,0 +1,42 @@
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Circus Dash</title>
+
+  <!-- El manifest debe ir aquí para que el navegador lo reconozca rápido -->
+  <link rel="manifest" href="manifest.json">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.js"></script>
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js')
+        .then(() => console.log("Juego listo para jugar sin internet"))
+        .catch(err => console.log("Fallo al registrar SW", err));
+    }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+    <!-- Scripts de lógica del juego -->
+    <script src="boot.js"></script>
+    <script src="carga.js"></script>
+    <script src="inicio.js"></script>
+    <script src="juego.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
